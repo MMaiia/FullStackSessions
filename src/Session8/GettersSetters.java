@@ -6,6 +6,7 @@ public class GettersSetters {
     public static void main(String[] args) {
         Person p = new Person();
         p.setFirstname("");
+        p.setage(9);
         System.out.println(p.getFirstname());
 
 
@@ -14,6 +15,24 @@ public class GettersSetters {
 class Person {
     private String firstname;
     private String lastname;
+    private int age;
+
+    public void setage(int age) {
+        if (age < 0) {
+            System.out.println("Invslid age");
+        } else {
+            this.age = age;
+
+        }
+
+
+        this.age = age;
+    }
+
+    public int getage() {
+        return age;
+    }
+
 
     public String getFirstname() {
         return firstname;
